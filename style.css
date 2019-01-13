@@ -1,5 +1,6 @@
 body {
     margin:0px;
+    background: #232323;
 }
 
 
@@ -108,6 +109,21 @@ body {
     height: auto !important;
     }
 
-.social-media {
+#social-media {
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    opacity: 0.5;
+}
 
+.down-arrow{
+    opacity: 0.3;
+    padding-top: 50px;
+    transition:all 1s;
+}
+
+.down-arrow:hover{
+    opacity: 0.6;
+    transition:all 1s;
 }
