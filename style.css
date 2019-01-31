@@ -3,6 +3,12 @@ body {
     background: #232323;
 }
 
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-weight:normal;
+    font-size: 2rem;
+    color:whitesmoke;
+}
 
 #main-container {
     width:100%;
@@ -126,4 +132,54 @@ body {
 .down-arrow:hover{
     opacity: 0.6;
     transition:all 1s;
+}
+
+/* container details */
+.flex-container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+    justify-content:center;
+    width:70%;
+    margin: 0px auto;
+}
+
+.flex-item {
+	-webkit-flex: 1 0 350px;
+    flex: 1 0 350px;
+    margin:15px;
+
+}
+
+/*featured styles*/
+#featured {
+    width:100%;
+    color: whitesmoke;
+    padding-top: 100px;
+    padding-bottom :100px;
+    font-family: 'Cormorant', serif;
+    font-weight: 300;
+    font-weight: normal;
+}
+
+#featured img {
+    max-width: 100%;
+    height: auto !important;
+    }
+#featured h1 {
+    margin: 0px;
+
+}
+
+.animate{
+ stroke-dasharray: 300;
+ stroke-dashoffset: 300;
+ animation: dash 5s linear forwards;
+}
+@keyframes dash {
+to {
+ stroke-dashoffset: 0;
+ }
 }
