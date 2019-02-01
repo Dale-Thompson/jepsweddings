@@ -15,9 +15,32 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Cormorant:300,400|Open+Sans:300,400|Dancing+Script" rel="stylesheet">
 
+
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+ <script>
+ $(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+});
+
+
+ </script>
 </head>
 
-<body>
+<body id="the-top">
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -32,13 +55,13 @@
 
             <div id="menu">
                 <div id="menu-block-one">
-                    <div class="menu-item"><a href="#">gallery</a></div>
-                    <div class="menu-item"><a href="#">pricing</a></div>
+                    <div class="menu-item"><a href="#gallery">gallery</a></div>
+                    <div class="menu-item"><a href="#pricing">pricing</a></div>
                 </div>
-                <div id="logo-image"><img src="logo.png"></div>
+                <div id="logo-image"><img src="images/general/logo.png"></div>
                 <div id="menu-block-two">
-                    <div class="menu-item"><a href="#">about</a></div>
-                    <div class="menu-item"> <a href="#">contact</a></div>
+                    <div class="menu-item"><a href="#about">about</a></div>
+                    <div class="menu-item"> <a href="#contact">contact</a></div>
                 </div>
             </div>
             <div class="hero-text">
@@ -47,16 +70,16 @@
                     over the earth and through the wind and water
                     until they brought you to me."</p>
                 <p class="hero-text-para">-Pablo Neruda, Your Feet</p>
-                <a href="#"><img class="down-arrow" src="down.png" /></a>
+                <a href="#featured"><img class="down-arrow" src="images/general/down.png" /></a>
 
             </div>
-            <div id="social-media"><img src="socialplaceholder.png"></div>
+            <div id="social-media"><img src="images/general/socialplaceholder.png"></div>
         </div>
     </div>
 
     <div id="featured">
         <div class="flex-container featured">
-            <div class="flex-item"><img src="feature.jpg"></div>
+            <div class="flex-item"><img src="images/general/feature.jpg"></div>
             <div class="flex-item">
                 <h1>Feature Wedding</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus sit amet nisi non pretium. In
@@ -70,9 +93,23 @@
         </div>
     </div>
 
-    <div class="flex-container" id="gallery">
+    <div id="gallery">
         <h1>Gallery</h1>
-
+        <div class="grid-container">
+            <div class="MainGallery"><a href=""><img src="images/gallery/main.jpg" /></a></div>
+            <div class="Gallery1"><a href=""><img src="images/gallery/1.jpg" /></a></div>
+            <div class="Gallery2"><a href=""><img src="images/gallery/2.jpg" /></a></div>
+            <div class="Gallery3"><a href=""><img src="images/gallery/3.jpg" /></a></div>
+            <div class="Gallery4"><a href=""><img src="images/gallery/4.jpg" /></a></div>
+            <div class="Gallery5"><a href=""><img src="images/gallery/5.jpg" /></a></div>
+            <div class="Gallery6"><a href=""><img src="images/gallery/6.jpg" /></a></div>
+            <div class="Gallery7"><a href=""><img src="images/gallery/7.jpg" /></a></div>
+            <div class="Gallery8"><a href=""><img src="images/gallery/8.jpg" /></a></div>
+            <div class="Gallery9"><a href=""><img src="images/gallery/1.jpg" /></a></div>
+            <div class="Gallery10"><a href=""><img src="images/gallery/2.jpg" /></a></div>
+            <div class="Gallery11"><a href=""><img src="images/gallery/3.jpg" /></a></div>
+            <div class="Gallery12"><a href=""><img src="images/gallery/4.jpg" /></a></div>
+          </div>
     </div>
 
     <div id="pricing">
@@ -81,28 +118,28 @@
         <div class="price-box price-box-item">
             <div class="price-box-header">Take Me Away</div>
             <div class="price">$600</div>
-            <div class="list-item">3 Hours Coverage <img src="tick.JPG" /></div>
-            <div class="list-item">Unlimited High Res images on custom Engraved USB<img src="tick.JPG" /></div>
-            <div class="list-item">Jepthah<img src="tick.JPG" /></div>
-            <div class="list-item">Select Images Available Day After For Social Media<img src="cross.JPG" /></div>
+            <div class="list-item">3 Hours Coverage <img src="images/general/tick.JPG" /></div>
+            <div class="list-item">Unlimited High Res images on custom Engraved USB<img src="images/general/tick.JPG" /></div>
+            <div class="list-item">Jepthah<img src="images/general/tick.JPG" /></div>
+            <div class="list-item">Select Images Available Day After For Social Media<img src="images/general/cross.JPG" /></div>
         </div>
 
         <div class="price-box price-box-item price-box-item-feature">
             <div class="price-box-header">Your Biggest Day</div>
             <div class="price">$1,100</div>
-            <div class="list-item">12 Hours Coverage<img src="tick.JPG" /></div>
-            <div class="list-item">Unlimited High Res images on custom Engraved USB<img src="tick.JPG" /></div>
-            <div class="list-item">Jepthah<img src="tick.JPG" /></div>
-            <div class="list-item">Select Images Available Day After For Social Media<img src="tick.JPG" /></div>
+            <div class="list-item">12 Hours Coverage<img src="images/general/tick.JPG" /></div>
+            <div class="list-item">Unlimited High Res images on custom Engraved USB<img src="images/general/tick.JPG" /></div>
+            <div class="list-item">Jepthah<img src="images/general/tick.JPG" /></div>
+            <div class="list-item">Select Images Available Day After For Social Media<img src="images/general/tick.JPG" /></div>
         </div>
 
         <div class="price-box price-box-item">
             <div class="price-box-header">Make Me Stay</div>
             <div class="price">$900</div>
-            <div class="list-item">6 Hours Coverage<img src="tick.JPG" /></div>
-            <div class="list-item">Unlimited High Res images on custom Engraved USB<img src="tick.JPG" /></div>
-            <div class="list-item">Jepthah<img src="tick.JPG" /></div>
-            <div class="list-item">Select Images Available Day After For Social Media<img src="cross.JPG" /></div>
+            <div class="list-item">6 Hours Coverage<img src="images/general/tick.JPG" /></div>
+            <div class="list-item">Unlimited High Res images on custom Engraved USB<img src="images/general/tick.JPG" /></div>
+            <div class="list-item">Jepthah<img src="images/general/tick.JPG" /></div>
+            <div class="list-item">Select Images Available Day After For Social Media<img src="images/general/cross.JPG" /></div>
         </div>
 </div>
 
@@ -165,18 +202,18 @@
     </div>
         <div id="footer-strip">
             <div class="flex-strip-container">
-                <div class="flex-strip-item contact"><img src="1.png" /></div>
-                <div class="flex-strip-item contact"><img src="2.png" /></div>
-                <div class="flex-strip-item contact"><img src="3.png" /></div>
-                <div class="flex-strip-item contact"><img src="4.png" /></div>
-                <div class="flex-strip-item contact"><img src="5.png" /></div>
-                <div class="flex-strip-item contact"><img src="6.png" /></div>
-                <div class="flex-strip-item contact"><img src="7.png" /></div>
-                <div class="flex-strip-item contact"><img src="8.png" /></div>
+                <div class="flex-strip-item contact"><img src="images/strip/1.png" /></div>
+                <div class="flex-strip-item contact"><img src="images/strip/2.png" /></div>
+                <div class="flex-strip-item contact"><img src="images/strip/3.png" /></div>
+                <div class="flex-strip-item contact"><img src="images/strip/4.png" /></div>
+                <div class="flex-strip-item contact"><img src="images/strip/5.png" /></div>
+                <div class="flex-strip-item contact"><img src="images/strip/6.png" /></div>
+                <div class="flex-strip-item contact"><img src="images/strip/7.png" /></div>
+                <div class="flex-strip-item contact"><img src="images/strip/8.png" /></div>
             </div>
         </div>
 
-        <div class="flex-container" id="footer">
+        <div class="flex-container-footer" id="footer">
             <div class="flex-item contact">
                 <h4>email</h4>
                 <p>hello@jepsweddings.com.au</p>
@@ -191,7 +228,7 @@
                     Pablo Neruda</p>
             </div>
             <div class="flex-item designedby">
-                <img src="vectorlivelinkback.png" />
+                <img src="images/general/vectorlivelinkback.png" />
 
             </div>
 

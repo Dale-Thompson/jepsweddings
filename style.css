@@ -71,7 +71,7 @@ h1 {
 
 .hero-image {
     /* The image used */
-    background-image: url("hero.jpeg");
+    background-image: url("images/general/hero.jpeg");
     /* Set a specific height */
     height: 920px;
     /* Position and center the image to scale nicely on all screens */
@@ -144,7 +144,19 @@ h1 {
     justify-content:center;
     width:70%;
     margin: 0px auto;
-    margin-top: 100px;
+    margin-top: 200px;
+}
+
+.flex-container-footer {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+    justify-content:center;
+    width:70%;
+    margin: 0px auto;
+   
 }
 
 .flex-item {
@@ -198,6 +210,46 @@ h1 {
     height:auto;
     margin-bottom:200px;
 }
+.grid-container img {
+    max-width: 100%;
+    height: auto !important;
+}
+
+.grid-container {
+    width:90%;
+    margin: 0px auto;
+    max-width:1215px;
+    display: grid;
+    grid-template-columns: 1min-content 1min-content 1min-content 1min-content;
+    grid-template-rows: 1min-content 1min-content 1min-content 1min-content;
+    grid-template-areas: "Gallery1 Gallery2 Gallery3 Gallery4" "Gallery5 MainGallery MainGallery Gallery6" "Gallery7 MainGallery MainGallery Gallery8" "Gallery9 Gallery10 Gallery11 Gallery12";
+  }
+  
+  .MainGallery { grid-area: MainGallery; }
+  
+  .Gallery1 { grid-area: Gallery1; }
+  
+  .Gallery2 { grid-area: Gallery2; }
+  
+  .Gallery3 { grid-area: Gallery3; }
+  
+  .Gallery4 { grid-area: Gallery4; }
+  
+  .Gallery5 { grid-area: Gallery5; }
+  
+  .Gallery6 { grid-area: Gallery6; }
+  
+  .Gallery7 { grid-area: Gallery7; }
+  
+  .Gallery8 { grid-area: Gallery8; }
+  
+  .Gallery9 { grid-area: Gallery9; }
+  
+  .Gallery10 { grid-area: Gallery10; }
+  
+  .Gallery11 { grid-area: Gallery11; }
+  
+  .Gallery12 { grid-area: Gallery12; }
 
 #pricing {
     width: 100%;
@@ -227,7 +279,7 @@ h1 {
     max-width: 300px;
     margin-left:2px;
     margin-right:2px;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
 }
 
 .price-box-item-feature {
