@@ -13,31 +13,28 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cormorant:300,400|Open+Sans:300,400|Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant:300,400|Open+Sans:300,400|Parisienne"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
 
+                var target = this.hash;
+                var $target = $(target);
 
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
- <script>
- $(document).ready(function(){
-	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
-
-	    var target = this.hash;
-	    var $target = $(target);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 900, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
-});
-
-
- </script>
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
+            });
+        });
+    </script>
 </head>
 
 <body id="the-top">
@@ -45,7 +42,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-
+    <a href="#the-top" id="topBtn" title="Go to top">Top</a>
 
 
 
@@ -64,7 +61,8 @@
                     <div class="menu-item"> <a href="#contact">contact</a></div>
                 </div>
             </div>
-            <div class="hero-text">
+
+            <div class="hero-text hero-animation">
                 <div class="call-to-action">Why don't we start your adventure......</div>
                 <p class="hero-text-para">"I love your feet because they have wandered
                     over the earth and through the wind and water
@@ -73,7 +71,12 @@
                 <a href="#featured"><img class="down-arrow" src="images/general/down.png" /></a>
 
             </div>
-            <div id="social-media"><img src="images/general/socialplaceholder.png"></div>
+            <div id="social-media">
+                <div><a href="#"></a></div>
+                <div><a href="#"></a></div>
+                <div><a href="#"></a></div>
+
+            </div>
         </div>
     </div>
 
@@ -95,149 +98,291 @@
 
     <div id="gallery">
         <h1>Gallery</h1>
-        <div class="grid-container">
-            <div class="MainGallery"><a href=""><img src="images/gallery/main.jpg" /></a></div>
-            <div class="Gallery1"><a href=""><img src="images/gallery/1.jpg" /></a></div>
-            <div class="Gallery2"><a href=""><img src="images/gallery/2.jpg" /></a></div>
-            <div class="Gallery3"><a href=""><img src="images/gallery/3.jpg" /></a></div>
-            <div class="Gallery4"><a href=""><img src="images/gallery/4.jpg" /></a></div>
-            <div class="Gallery5"><a href=""><img src="images/gallery/5.jpg" /></a></div>
-            <div class="Gallery6"><a href=""><img src="images/gallery/6.jpg" /></a></div>
-            <div class="Gallery7"><a href=""><img src="images/gallery/7.jpg" /></a></div>
-            <div class="Gallery8"><a href=""><img src="images/gallery/8.jpg" /></a></div>
-            <div class="Gallery9"><a href=""><img src="images/gallery/1.jpg" /></a></div>
-            <div class="Gallery10"><a href=""><img src="images/gallery/2.jpg" /></a></div>
-            <div class="Gallery11"><a href=""><img src="images/gallery/3.jpg" /></a></div>
-            <div class="Gallery12"><a href=""><img src="images/gallery/4.jpg" /></a></div>
-          </div>
+        <div class="grid-wrapper">
+            <div class="grid-container">
+                <div class="MainGallery"><img onclick="choose(this);" alt="Wedding 1" class="grow"
+                        src="images/gallery/main.jpg" data-id="gallerymain" id="gallerymain" /></div>
+                <div class="Gallery1"><img onclick="choose(this);" alt="Wedding 2" class="grow"
+                        src="images/gallery/1.jpg" data-id="gallery1" id="gallery1" /></div>
+                <div class="Gallery2"><img onclick="choose(this);" alt="Wedding 3" class="grow"
+                        src="images/gallery/2.jpg" data-id="gallery2" id="gallery2" /></div>
+                <div class="Gallery3"><img onclick="choose(this);" alt="Wedding 4" class="grow"
+                        src="images/gallery/3.jpg" data-id="gallery3" id="gallery3" /></div>
+                <div class="Gallery4"><img onclick="choose(this);" alt="Wedding 5" class="grow"
+                        src="images/gallery/4.jpg" data-id="gallery4" id="gallery4" /></div>
+                <div class="Gallery5"><img onclick="choose(this);" alt="Wedding 6" class="grow"
+                        src="images/gallery/5.jpg" data-id="gallery5" id="gallery5" /></div>
+                <div class="Gallery6"><img onclick="choose(this);" alt="Wedding 7" class="grow"
+                        src="images/gallery/6.jpg" data-id="gallery6" id="gallery6" /></div>
+                <div class="Gallery7"><img onclick="choose(this);" alt="Wedding 8" class="grow"
+                        src="images/gallery/7.jpg" data-id="gallery7" id="gallery7" /></div>
+                <div class="Gallery8"><img onclick="choose(this);" alt="Wedding 9" class="grow"
+                        src="images/gallery/8.jpg" data-id="gallery8" id="gallery8" /></div>
+                <div class="Gallery9"><img onclick="choose(this);" alt="Wedding 10" class="grow"
+                        src="images/gallery/1.jpg" data-id="gallery9" id="gallery9" /></div>
+                <div class="Gallery10"><img onclick="choose(this);" alt="Wedding 11" class="grow"
+                        src="images/gallery/2.jpg" data-id="gallery10" id="gallery10" /></div>
+                <div class="Gallery11"><img onclick="choose(this);" alt="Wedding 12" class="grow"
+                        src="images/gallery/3.jpg" data-id="gallery11" id="gallery11" /></div>
+                <div class="Gallery12"><img onclick="choose(this);" alt="Wedding 13" class="grow"
+                        src="images/gallery/4.jpg" data-id="gallery12" id="gallery12" /></div>
+            </div>
+        </div>
     </div>
-
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
     <div id="pricing">
         <h1>Pricing</h1>
-<div class="flex-container">
-        <div class="price-box price-box-item">
-            <div class="price-box-header">Take Me Away</div>
-            <div class="price">$600</div>
-            <div class="list-item">3 Hours Coverage <img src="images/general/tick.JPG" /></div>
-            <div class="list-item">Unlimited High Res images on custom Engraved USB<img src="images/general/tick.JPG" /></div>
-            <div class="list-item">Jepthah<img src="images/general/tick.JPG" /></div>
-            <div class="list-item">Select Images Available Day After For Social Media<img src="images/general/cross.JPG" /></div>
-        </div>
+        <div class="flex-container">
 
-        <div class="price-box price-box-item price-box-item-feature">
-            <div class="price-box-header">Your Biggest Day</div>
-            <div class="price">$1,100</div>
-            <div class="list-item">12 Hours Coverage<img src="images/general/tick.JPG" /></div>
-            <div class="list-item">Unlimited High Res images on custom Engraved USB<img src="images/general/tick.JPG" /></div>
-            <div class="list-item">Jepthah<img src="images/general/tick.JPG" /></div>
-            <div class="list-item">Select Images Available Day After For Social Media<img src="images/general/tick.JPG" /></div>
-        </div>
+                <div class="price-box price-box-item">
+                        <div class="price-box-header">If I May</div>
+                        <div class="price">$599</div>
+                        <div class="list-item">2 Hours Coverage<img src="images/general/tick.JPG" /></div>
+                        <div class="list-item">Unlimited ( 100+ ) High Res digital images<img src="images/general/tick.JPG" />
+                        </div>
+                        <div class="list-item">Delivered in a custome engraved USB & Wooden Box<img
+                                src="images/general/tick.JPG" /></div>
+                        <div class="list-item">Selection of 40 6X4 Prints<img src="images/general/tick.JPG" /></div>
+                        <div class="list-item">Delivery in 3-4 Weeks<img src="images/general/tick.JPG" /></div>
+                        <div class="list-item">Doesn't Include voucher for anniversary or engagement shoot<img
+                                src="images/general/cross.JPG" /></div>
+                    </div>
 
-        <div class="price-box price-box-item">
-            <div class="price-box-header">Make Me Stay</div>
-            <div class="price">$900</div>
-            <div class="list-item">6 Hours Coverage<img src="images/general/tick.JPG" /></div>
-            <div class="list-item">Unlimited High Res images on custom Engraved USB<img src="images/general/tick.JPG" /></div>
-            <div class="list-item">Jepthah<img src="images/general/tick.JPG" /></div>
-            <div class="list-item">Select Images Available Day After For Social Media<img src="images/general/cross.JPG" /></div>
+
+            <div class="price-box price-box-item">
+                <div class="price-box-header">Take Me Away</div>
+                <div class="price">$799</div>
+                <div class="list-item">3 Hours Coverage <img src="images/general/tick.JPG" /></div>
+                <div class="list-item">Unlimited High Res images on custom Engraved USB<img
+                        src="images/general/tick.JPG" /></div>
+                <div class="list-item">Jepthah<img src="images/general/tick.JPG" /></div>
+                <div class="list-item">Select Images Available Day After For Social Media<img
+                        src="images/general/cross.JPG" /></div>
+            </div>
+
+            <div class="price-box price-box-item">
+                <div class="price-box-header">Make Me Stay</div>
+                <div class="price">$1,199</div>
+                <div class="second-price">Second Shooter Option $1,599</div>
+                <div class="list-item">8 Hours Coverage<img src="images/general/tick.JPG" /></div>
+                <div class="list-item">Unlimited (400 +)High Res images on custom Engraved USB<img
+                        src="images/general/tick.JPG" /></div>
+                <div class="list-item">Delivered in a custome engraved USB & Wooden Box<img
+                        src="images/general/tick.JPG" /></div>
+                        <div class="list-item">60 6X4 Prints<img
+                            src="images/general/tick.JPG" /></div>
+                <div class="list-item">Includes $100 voucher for anniversary or engagement shoot<img src="images/general/tick.JPG" /></div>
+                <div class="list-item">Delivery in 6-8 Weeks<img src="images/general/tick.JPG" /></div>
+            </div>
+
+            <div class="price-box price-box-item price-box-item-feature">
+                <div class="price-box-header">Your Biggest Day</div>
+                <div class="price">$1,499</div>
+                <div class="second-price">Second Shooter Option $2,099</div>
+                <div class="list-item">12 Hours Coverage<img src="images/general/tick.JPG" /></div>
+                <div class="list-item">Unlimited ( 500 +)High Res images on custom Engraved USB<img
+                        src="images/general/tick.JPG" /></div>
+                        <div class="list-item">Delivered in a custome engraved USB & Wooden Box<img
+                            src="images/general/tick.JPG" /></div>
+                            <div class="list-item">70 6X4 Prints<img
+                                src="images/general/tick.JPG" /></div>
+                <div class="list-item">Includes $200 voucher for anniversary or engagement shoot<img src="images/general/tick.JPG" /></div>
+                <div class="list-item">Delivery in 6-8 Weeks<img src="images/general/tick.JPG" /></div>
+            </div>
+
+        
         </div>
-</div>
 
     </div>
 
     <div id="about">
         <h1>About</h1>
-        <div class="about-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus sit amet nisi non pretium. In
-            faucibus nulla non sapien lobortis volutpat. Proin eu urna nulla. Nam non nisi mauris. Ut purus
-            orci, aliquet eget porta at, tempor ac libero. In hac habitasse platea dictumst. Sed id est nisi.
-            Aliquam et nisi lobortis, posuere massa eget, viverra ligula. Morbi non ultrices nunc. Sed nec
-            magna diam. Vestibulum non sagittis nisl. Sed ullamcorper, mi nec tincidunt blandit, est purus
-            venenatis eros, at efficitur lorem ipsum nec erat. Etiam pretium ipsum ac tortor lacinia pharetra.
-            Donec tincidunt justo ut urna viverra vehicula.
-        
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus sit amet nisi non pretium. In
-            faucibus nulla non sapien lobortis volutpat. Proin eu urna nulla. Nam non nisi mauris. Ut purus
-            orci, aliquet eget porta at, tempor ac libero. In hac habitasse platea dictumst. Sed id est nisi.
-            Aliquam et nisi lobortis, posuere massa eget, viverra ligula. Morbi non ultrices nunc. Sed nec
-            magna diam. Vestibulum non sagittis nisl. Sed ullamcorper, mi nec tincidunt blandit, est purus
-            venenatis eros, at efficitur lorem ipsum nec erat. Etiam pretium ipsum ac tortor lacinia pharetra.
-            Donec tincidunt justo ut urna viverra vehicula.</div>
+
+        <input type="checkbox" class="read-more-state" id="post-2" />
+
+        <ul class="read-more-wrap">
+            <div class="about-content">I have always been fascinated by human beauty and in how many different ways it
+                exists. This fascination alone has been fueling my passion for photography ever since I’ve held my first
+                camera as a young boy. (I was always that kid that was asked to take family photos)
+                I never took photographs seriously until my dad passed away a number of years ago, I didn’t have many
+                photos
+                of him and valued the ones I did, I truly believe that in a wedding it’s not just two people it’s the
+                joining of two families so I treasure the bonds not only of you and your fiancé but of you and your
+                family.............
+            </div>
+            <div id="about-end" class="about-content read-more-target">
+                Photography allows me to immerse myself in the beauty of what I see with my own eyes, capturing the best
+                aspects of it, and telling the story through my images.
+
+                Capturing all the emotions, love and joy between a couple, as the day unfolds from start to finish and
+                letting photography reflect the true essence of your amazing day.
+                Allowing the day to run smoothly with my approach while documenting moments that reflect the
+                personalities
+                and vision of the couple.
+                I document all of the special details of your day that you have spent so long planning along in an
+                honest
+                and creative way.
+            </div>
+            <div class="about-content read-more-target">
+                My friendly approach and a dedication in exceeding your expectations is providing you the personal and
+                unique touch that you deserve.
+
+                Whatever your moment or vision, I will help you capture it!
+
+                Feel free to contact me about your enquires. I would love to tell your love story through images that
+                you can cherish forever.
+
+
+                Okay so you know how nobody actually reads this or really cares, I want to put that to the test. So if
+                you actually made it all the way down here and read this all the way through you will get 5% off your
+                selected collection (first time bookings only) ON ONE CONDITION. You have to call me on my number and
+                when I pick up the phone you need to recite George Costanzas answering machine jingle, after this you
+                can proceed with your enquiry.
+            </div>
+            <div class="about-content read-more-target">
+                Big hugs,
+                Jep
+
+                <!-- Read More -->
+            </div>
+        </ul>
+
+        <label for="post-2" class="read-more-trigger"></label>
+    </div>
+
+
     </div>
 
     <div id="contact">
         <h1>Contact</h1>
         <h4>Want to hire me ? Let me know below!</h4>
         <div class="form">
-            <form autocomplete="off"  id="form" name="form" method="post">
-                    <div style="height:100px;">
-                        <label class="field field_animated field_a2 page__field">
-                            <input id="name" class="field__input" placeholder="Don't enter something stupid like Mc'lovin....unless, you know... its Mc'lovin"
-                                type="text" required  />
-                            <span class="field__label-wrap">
-                                <span class="field__label">Let me know your name...</span>
-                            </span>
-                        </label>
-                    </div>
+            <form autocomplete="off" id="form" name="form" method="post">
+                <input name="hidden" type="text" style="display:none;" autocomplete="off" />
+                <div style="height:100px;">
+                    <label class="field field_animated field_a2 page__field">
+                        <input autocomplete="off" id="name" class="field__input"
+                            placeholder="Please enter your names here..." type="text" required />
+                        <span class="field__label-wrap">
+                            <span class="field__label">You and Your Fiances Name</span>
+                        </span>
+                    </label>
+                </div>
 
-                    <div style="height:100px;">
-                        <label class="field field_animated field_a2 page__field">
-                            <input id="email" class="field__input" placeholder="must be a valid email... that means you need an @ symbol and .com.au or something"
-                                type="text" required>
-                            <span class="field__label-wrap">
-                                <span class="field__label">I'll need to respond somehow.....email perhaps ? </span>
-                            </span>
-                        </label>
-                    </div>
+                <div style="height:100px;">
+                    <label class="field field_animated field_a2 page__field">
+                        <input autocomplete="off" id="datepicker" class="field__input" placeholder="" type="text"
+                            required />
+                        <span class="field__label-wrap">
+                            <span class="field__label1">Whens the big day</span>
+                        </span>
+                    </label>
+                </div>
 
-                    <div style="height:100px;">
-                        <label class="field field_animated field_a2 page__field">Tell me your story.....</label>
-                            <textarea rows="5" cols="33" placeholder="Tell me your story...." type="text" class="field__input" required> </textarea>
-                         
-                    </div>
+
+                <div style="height:100px;">
+                    <label class="field field_animated field_a2 page__field">
+                        <input autocomplete="off" id="Email" class="field__input"
+                            placeholder="Please double check your email to make sure its correct..." type="email"
+                            required />
+                        <span class="field__label-wrap">
+                            <span class="field__label">Email</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div style="height:100px;">
+                    <label class="field field_animated field_a2 page__field">
+                        <select class="select-form field__input" name="Package" required>
+                            <option value="Take me Away">Packages</option>
+                            <option value="Take me Away">Take Me Away - $600</option>
+                            <option value="Make Me Stay">Make Me Stay - $900</option>
+                            <option value="Third Package">Third Package</option>
+                            <option value="Your Biggest Day">Your Biggest Day - $1100</option>
+                        </select>
+                        <span class="field__label-wrap">
+                            <span class="field__label">Which Package Do You Want ?</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div style="height:100px;">
+                    <label class="field field_animated field_a2 page__field">
+                        <input autocomplete="off" id="Location" class="field__input"
+                            placeholder="Where are you having the wedding ?" type="text" required />
+                        <span class="field__label-wrap">
+                            <span class="field__label">Location</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div style="height:100px;">
+                    <label class="field field_animated field_a2 page__field">
+                        <input autocomplete="off" id="Marketing" class="field__input"
+                            placeholder="Please let me know where you found me, google - facebook - instagram - friends ? "
+                            type="text" required />
+                        <span class="field__label-wrap">
+                            <span class="field__label">How did you find me ? </span>
+                        </span>
+                    </label>
+                </div>
+
+                <button class="read-more-trigger">Submit</button>
+
 
 
             </form>
 
         </div>
     </div>
-        <div id="footer-strip">
-            <div class="flex-strip-container">
-                <div class="flex-strip-item contact"><img src="images/strip/1.png" /></div>
-                <div class="flex-strip-item contact"><img src="images/strip/2.png" /></div>
-                <div class="flex-strip-item contact"><img src="images/strip/3.png" /></div>
-                <div class="flex-strip-item contact"><img src="images/strip/4.png" /></div>
-                <div class="flex-strip-item contact"><img src="images/strip/5.png" /></div>
-                <div class="flex-strip-item contact"><img src="images/strip/6.png" /></div>
-                <div class="flex-strip-item contact"><img src="images/strip/7.png" /></div>
-                <div class="flex-strip-item contact"><img src="images/strip/8.png" /></div>
-            </div>
+    <div id="footer-strip">
+        <div class="flex-strip-container">
+            <div class="flex-strip-item contact"><img src="images/strip/1.png" /></div>
+            <div class="flex-strip-item contact"><img src="images/strip/2.png" /></div>
+            <div class="flex-strip-item contact"><img src="images/strip/3.png" /></div>
+            <div class="flex-strip-item contact"><img src="images/strip/4.png" /></div>
+            <div class="flex-strip-item contact"><img src="images/strip/5.png" /></div>
+            <div class="flex-strip-item contact"><img src="images/strip/6.png" /></div>
+            <div class="flex-strip-item contact"><img src="images/strip/7.png" /></div>
+            <div class="flex-strip-item contact"><img src="images/strip/8.png" /></div>
         </div>
+    </div>
 
-        <div class="flex-container-footer" id="footer">
-            <div class="flex-item contact">
-                <h4>email</h4>
-                <p>hello@jepsweddings.com.au</p>
+    <div class="flex-container-footer" id="footer">
+        <div class="flex-item contact">
+            <h4>email</h4>
+            <p>hello@jepsweddings.com.au</p>
 
-                <h4>phone</h4>
-                <p>0422066366</p>
-
-            </div>
-            <div class="flex-item feature">
-                <h4>Yes, I will take your photos for you.......</h4>
-                <p>"I love you as certain dark things are to be loved, in secret, between the shadow and the soul" -
-                    Pablo Neruda</p>
-            </div>
-            <div class="flex-item designedby">
-                <img src="images/general/vectorlivelinkback.png" />
-
-            </div>
+            <h4>phone</h4>
+            <p>0422066366</p>
 
         </div>
+        <div class="flex-item feature">
+            <h4>Yes, I will take your photos for you.......</h4>
+            <p>"I love you as certain dark things are to be loved, in secret, between the shadow and the soul" -
+                Pablo Neruda</p>
+        </div>
+        <div class="flex-item designedby">
+            <img src="images/general/vectorlivelinkback.png" />
+
+        </div>
+
+    </div>
 
 
 
 
-        <script src="script.js"></script>
+    <script>
+        var picker = new Pikaday({
+            field: document.getElementById('datepicker')
+        });
+    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
