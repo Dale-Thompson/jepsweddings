@@ -3,19 +3,22 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html class="no-js" lang="eng">
 <!--<![endif]-->
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="strict-origin" />
     <title>Jeps Weddings - Yes, I will Take Your Photos.</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-Bx4pytHkyTDy3aJKjGkGoHPt3tvv6zlwwjc3iqN7ktaiEMLDPqLSZYts2OjKcBx1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Cormorant:300,400|Open+Sans:300,400|Parisienne"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+
     <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -42,7 +45,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <a href="#the-top" id="topBtn" title="Go to top">Top</a>
+    <a href="#the-top" id="topBtn" title="Go to top">top <i class="fal fa-angle-up fa-1x"></i></a>
 
 
 
@@ -51,26 +54,24 @@
         <div class="hero-image">
 
             <div id="menu">
-                <div id="menu-block-one">
+                <div class ="animate fadeInLeft two" id="menu-block-one">
                     <div class="menu-item"><a href="#gallery">gallery</a></div>
                     <div class="menu-item"><a href="#pricing">pricing</a></div>
                 </div>
-                <div id="logo-image"><img src="images/general/logo.png"></div>
-                <div id="menu-block-two">
+                <div class="animate fadeInUp one" id="logo-image"><img src="images/general/logo.png" alt="logo for jeps weddings"></div>
+                <div class="animate fadeInRight two" id="menu-block-two">
                     <div class="menu-item"><a href="#about">about</a></div>
                     <div class="menu-item"> <a href="#contact">contact</a></div>
                 </div>
             </div>
-
-            <div class="hero-text hero-animation">
+            
+            <div class="hero-text animate fadeIn three">
                 <div class="call-to-action">Why don't we start your adventure......</div>
                 <p class="hero-text-para">"I love your feet because they have wandered
                     over the earth and through the wind and water
-                    until they brought you to me."</p>
-                <p class="hero-text-para">-Pablo Neruda, Your Feet</p>
-                <a href="#featured"><img class="down-arrow" src="images/general/down.png" /></a>
-
+                    until they brought you to me." -Pablo Neruda, Your Feet</p>
             </div>
+            <div class="hero-text-action"><a href="#featured"><i class="animate fadeInUp six fal fa-angle-down fa-5x"></i></a></div>
             <div id="social-media">
                 <div><a href="#"></a></div>
                 <div><a href="#"></a></div>
@@ -82,7 +83,7 @@
 
     <div id="featured">
         <div class="flex-container featured">
-            <div class="flex-item"><img src="images/general/feature.jpg"></div>
+            <div class="flex-item"><img src="images/general/feature.jpg" alt="Featured Wedding Photo"></div>
             <div class="flex-item">
                 <h1>Feature Wedding</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus sit amet nisi non pretium. In
@@ -95,109 +96,163 @@
             </div>
         </div>
     </div>
-
+    
     <div id="gallery">
         <h1>Gallery</h1>
         <div class="grid-wrapper">
             <div class="grid-container">
-                <div class="MainGallery"><img onclick="choose(this);" alt="Wedding 1" class="grow"
+                <div class="MainGallery"><img alt="Gallerys Main photograph for jeps weddings." onclick="choose(this);" alt="Wedding 1" class="grow"
                         src="images/gallery/main.jpg" data-id="gallerymain" id="gallerymain" /></div>
-                <div class="Gallery1"><img onclick="choose(this);" alt="Wedding 2" class="grow"
+                <div class="Gallery1"><img  alt="Gallerys 1st photograph for jeps weddings." onclick="choose(this);" alt="Wedding 2" class="grow"
                         src="images/gallery/1.jpg" data-id="gallery1" id="gallery1" /></div>
-                <div class="Gallery2"><img onclick="choose(this);" alt="Wedding 3" class="grow"
+                <div class="Gallery2"><img alt="Gallerys 2nd photograph for jeps weddings." onclick="choose(this);" alt="Wedding 3" class="grow"
                         src="images/gallery/2.jpg" data-id="gallery2" id="gallery2" /></div>
-                <div class="Gallery3"><img onclick="choose(this);" alt="Wedding 4" class="grow"
+                <div class="Gallery3"><img  alt="Gallerys 3rd photograph for jeps weddings." onclick="choose(this);" alt="Wedding 4" class="grow"
                         src="images/gallery/3.jpg" data-id="gallery3" id="gallery3" /></div>
                 <div class="Gallery4"><img onclick="choose(this);" alt="Wedding 5" class="grow"
-                        src="images/gallery/4.jpg" data-id="gallery4" id="gallery4" /></div>
+                        src="images/gallery/4.jpg" alt="Gallerys 4th photograph for jeps weddings." data-id="gallery4" id="gallery4" /></div>
                 <div class="Gallery5"><img onclick="choose(this);" alt="Wedding 6" class="grow"
-                        src="images/gallery/5.jpg" data-id="gallery5" id="gallery5" /></div>
+                        src="images/gallery/5.jpg" alt="Gallerys 5tg photograph for jeps weddings." data-id="gallery5" id="gallery5" /></div>
                 <div class="Gallery6"><img onclick="choose(this);" alt="Wedding 7" class="grow"
-                        src="images/gallery/6.jpg" data-id="gallery6" id="gallery6" /></div>
+                        src="images/gallery/6.jpg" alt="Gallerys 6th photograph for jeps weddings." data-id="gallery6" id="gallery6" /></div>
                 <div class="Gallery7"><img onclick="choose(this);" alt="Wedding 8" class="grow"
-                        src="images/gallery/7.jpg" data-id="gallery7" id="gallery7" /></div>
+                        src="images/gallery/7.jpg" alt="Gallerys 7th photograph for jeps weddings." data-id="gallery7" id="gallery7" /></div>
                 <div class="Gallery8"><img onclick="choose(this);" alt="Wedding 9" class="grow"
-                        src="images/gallery/8.jpg" data-id="gallery8" id="gallery8" /></div>
+                        src="images/gallery/8.jpg" alt="Gallerys 8th photograph for jeps weddings." data-id="gallery8" id="gallery8" /></div>
                 <div class="Gallery9"><img onclick="choose(this);" alt="Wedding 10" class="grow"
-                        src="images/gallery/1.jpg" data-id="gallery9" id="gallery9" /></div>
+                        src="images/gallery/1.jpg" alt="Gallerys 9th photograph for jeps weddings." data-id="gallery9" id="gallery9" /></div>
                 <div class="Gallery10"><img onclick="choose(this);" alt="Wedding 11" class="grow"
-                        src="images/gallery/2.jpg" data-id="gallery10" id="gallery10" /></div>
+                        src="images/gallery/2.jpg" alt="Gallerys 10th photograph for jeps weddings." data-id="gallery10" id="gallery10" /></div>
                 <div class="Gallery11"><img onclick="choose(this);" alt="Wedding 12" class="grow"
-                        src="images/gallery/3.jpg" data-id="gallery11" id="gallery11" /></div>
+                        src="images/gallery/3.jpg" alt="Gallerys 11th photograph for jeps weddings." data-id="gallery11" id="gallery11" /></div>
                 <div class="Gallery12"><img onclick="choose(this);" alt="Wedding 13" class="grow"
-                        src="images/gallery/4.jpg" data-id="gallery12" id="gallery12" /></div>
+                        src="images/gallery/4.jpg" alt="Gallerys 12th photograph for jeps weddings." data-id="gallery12" id="gallery12" /></div>
             </div>
         </div>
     </div>
     <!-- The Modal -->
+
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
+        <img alt="modal image loaded from the gallery" class="modal-content" id="img01">
         <div id="caption"></div>
     </div>
+
+
+
     <div id="pricing">
+
         <h1>Pricing</h1>
+
         <div class="flex-container">
 
-                <div class="price-box price-box-item">
-                        <div class="price-box-header">If I May</div>
-                        <div class="price">$599</div>
-                        <div class="list-item">2 Hours Coverage<img src="images/general/tick.JPG" /></div>
-                        <div class="list-item">Unlimited ( 100+ ) High Res digital images<img src="images/general/tick.JPG" />
-                        </div>
-                        <div class="list-item">Delivered in a custome engraved USB & Wooden Box<img
-                                src="images/general/tick.JPG" /></div>
-                        <div class="list-item">Selection of 40 6X4 Prints<img src="images/general/tick.JPG" /></div>
-                        <div class="list-item">Delivery in 3-4 Weeks<img src="images/general/tick.JPG" /></div>
-                        <div class="list-item">Doesn't Include voucher for anniversary or engagement shoot<img
-                                src="images/general/cross.JPG" /></div>
-                    </div>
+            <div class="price-box price-box-item">
+
+                <div class="price-box-header">If I May</div>
+
+                <div class="price"><span>$599</span>
+                    <span class="second-price">Second Shooter - Not Available</span></div>
+
+                <div class="list-item">2 Hours Coverage <i class="far fa-check green"></i></div>
+
+                <div class="list-item">Unlimited ( 100+ ) High Res digital images <i class="far fa-check green"></i></div>
+
+                <div class="list-item">Delivered in a custome engraved USB & Wooden Box <i class="far fa-check green"></i></div>
+
+                <div class="list-item">Selection of 40 6X4 Prints <i class="far fa-check green"></i></div>
+
+                <div class="list-item">Delivery in 3-4 Weeks <i class="far fa-check green"></i></div>
+
+                <div class="list-item">Doesn't Include voucher for anniversary or engagement shoot <i class="far fa-times red"></i> </div>
+
+            </div>
 
 
             <div class="price-box price-box-item">
+
                 <div class="price-box-header">Take Me Away</div>
-                <div class="price">$799</div>
-                <div class="list-item">3 Hours Coverage <img src="images/general/tick.JPG" /></div>
-                <div class="list-item">Unlimited High Res images on custom Engraved USB<img
-                        src="images/general/tick.JPG" /></div>
-                <div class="list-item">Jepthah<img src="images/general/tick.JPG" /></div>
-                <div class="list-item">Select Images Available Day After For Social Media<img
-                        src="images/general/cross.JPG" /></div>
+
+                <div class="price">
+                    
+                        <span>$799</span>
+                        <span class="second-price">Second Shooter - Not Available</span>
+                
+                </div>
+
+                <div class="list-item">4 Hours Coverage <i class="far fa-check green"></i></div>
+
+                <div class="list-item">Unlimited ( 200+ ) High Res digital images <i class="far fa-check green"></i></div>
+
+                <div class="list-item">Delivered in a custome engraved USB & Wooden Box <i class="far fa-check green"></i> </div>
+
+                <div class="list-item">Selection of 50 6X4 Prints <i class="far fa-check green"></i></div>
+
+                <div class="list-item">Delivery in 3-4 Weeks <i class="far fa-check green"></i></div>
+
+                <div class="list-item">Doesn't Include voucher for anniversary or engagement shoot <i class="far fa-times red"></i> </div>
             </div>
 
             <div class="price-box price-box-item">
-                <div class="price-box-header">Make Me Stay</div>
-                <div class="price">$1,199</div>
-                <div class="second-price">Second Shooter Option $1,599</div>
-                <div class="list-item">8 Hours Coverage<img src="images/general/tick.JPG" /></div>
-                <div class="list-item">Unlimited (400 +)High Res images on custom Engraved USB<img
-                        src="images/general/tick.JPG" /></div>
-                <div class="list-item">Delivered in a custome engraved USB & Wooden Box<img
-                        src="images/general/tick.JPG" /></div>
-                        <div class="list-item">60 6X4 Prints<img
-                            src="images/general/tick.JPG" /></div>
-                <div class="list-item">Includes $100 voucher for anniversary or engagement shoot<img src="images/general/tick.JPG" /></div>
-                <div class="list-item">Delivery in 6-8 Weeks<img src="images/general/tick.JPG" /></div>
-            </div>
+
+                    <div class="price-box-header">Make Me Stay</div>
+    
+                    <div class="price">
+                        <span>$1,199</span>
+                        <span class="second-price">Second Shooter - $1599</span>
+                    
+                    </div>
+    
+                    <div class="list-item">Second Shooter Option <i class="far fa-check green"></i></div>
+    
+                    <div class="list-item">8 Hours Coverage <i class="far fa-check green "></i></div>
+    
+                    <div class="list-item">Unlimited (400 +)High Res images on custom Engraved USB <i class="far fa-check green"></i></div>
+    
+                    <div class="list-item">Delivered in a custome engraved USB & Wooden Box <i class="far fa-check green"></i></div>
+    
+                    <div class="list-item">60 6X4 Prints <i class="far fa-check green"></i></div>
+    
+                    <div class="list-item">Includes $100 voucher for anniversary or engagement shoot <i class="far fa-check green"></i></div>
+    
+                    <div class="list-item">Delivery in 6-8 Weeks <i class="far fa-check green"></i></div>
+    
+                </div>
 
             <div class="price-box price-box-item price-box-item-feature">
+
                 <div class="price-box-header">Your Biggest Day</div>
-                <div class="price">$1,499</div>
-                <div class="second-price">Second Shooter Option $2,099</div>
-                <div class="list-item">12 Hours Coverage<img src="images/general/tick.JPG" /></div>
-                <div class="list-item">Unlimited ( 500 +)High Res images on custom Engraved USB<img
-                        src="images/general/tick.JPG" /></div>
-                        <div class="list-item">Delivered in a custome engraved USB & Wooden Box<img
-                            src="images/general/tick.JPG" /></div>
-                            <div class="list-item">70 6X4 Prints<img
-                                src="images/general/tick.JPG" /></div>
-                <div class="list-item">Includes $200 voucher for anniversary or engagement shoot<img src="images/general/tick.JPG" /></div>
-                <div class="list-item">Delivery in 6-8 Weeks<img src="images/general/tick.JPG" /></div>
+
+                <div class="price">
+                    
+                        <span>$1,499</span>
+                        <span class="second-price">Second Shooter - $2,099</span>
+
+
+                </div>
+
+                <div class="list-item">Second Shooter Option <i class="far fa-check green"></i></div>
+
+                <div class="list-item">12 Hours Coverage <i class="far fa-check green"></i></div>
+
+                <div class="list-item">Unlimited ( 500 +)High Res images on custom Engraved USB <i class="far fa-check green"></i></div>
+
+                <div class="list-item">Delivered in a custome engraved USB & Wooden Box <i class="far fa-check green"></i></div>
+
+                <div class="list-item">70 6X4 Prints <i class="far fa-check green"></i></div>
+
+                <div class="list-item">Includes $200 voucher for anniversary or engagement shoot <i class="far fa-check green"></i></div>
+
+                <div class="list-item">Delivery in 6-8 Weeks <i class="far fa-check green"></i></div>
+
+            
             </div>
+            
 
-        
-        </div>
 
+            
+        </div> 
+
+        <div class="select-package"><a href="#contact" class="read-more-trigger">Select Package</a></div>
     </div>
 
     <div id="about">
@@ -205,7 +260,7 @@
 
         <input type="checkbox" class="read-more-state" id="post-2" />
 
-        <ul class="read-more-wrap">
+        <div class="read-more-wrap">
             <div class="about-content">I have always been fascinated by human beauty and in how many different ways it
                 exists. This fascination alone has been fueling my passion for photography ever since I’ve held my first
                 camera as a young boy. (I was always that kid that was asked to take family photos)
@@ -250,7 +305,7 @@
 
                 <!-- Read More -->
             </div>
-        </ul>
+        </div>
 
         <label for="post-2" class="read-more-trigger"></label>
     </div>
@@ -300,10 +355,13 @@
                     <label class="field field_animated field_a2 page__field">
                         <select class="select-form field__input" name="Package" required>
                             <option value="Take me Away">Packages</option>
-                            <option value="Take me Away">Take Me Away - $600</option>
-                            <option value="Make Me Stay">Make Me Stay - $900</option>
-                            <option value="Third Package">Third Package</option>
+                            <option value="Take me Away">If I May - $599</option>
+                            <option value="Make Me Stay">Take Me Away - $799</option>
+                            <option value="Make Me Stay">Make Me Stay - $1199</option>
+                            <option value="Make Me Stay - Second Shooter">Make Me Stay Second Shooter - $1599</option>
                             <option value="Your Biggest Day">Your Biggest Day - $1100</option>
+                            <option value="Your Biggest Day - Second Shooter">Your Biggest Day Secondd Shooter - $2099
+                            </option>
                         </select>
                         <span class="field__label-wrap">
                             <span class="field__label">Which Package Do You Want ?</span>
@@ -342,14 +400,14 @@
     </div>
     <div id="footer-strip">
         <div class="flex-strip-container">
-            <div class="flex-strip-item contact"><img src="images/strip/1.png" /></div>
-            <div class="flex-strip-item contact"><img src="images/strip/2.png" /></div>
-            <div class="flex-strip-item contact"><img src="images/strip/3.png" /></div>
-            <div class="flex-strip-item contact"><img src="images/strip/4.png" /></div>
-            <div class="flex-strip-item contact"><img src="images/strip/5.png" /></div>
-            <div class="flex-strip-item contact"><img src="images/strip/6.png" /></div>
-            <div class="flex-strip-item contact"><img src="images/strip/7.png" /></div>
-            <div class="flex-strip-item contact"><img src="images/strip/8.png" /></div>
+            <div class="flex-strip-item contact"><img alt="strip image from gallery" src="images/strip/1.png" /></div>
+            <div class="flex-strip-item contact"><img alt="strip image from gallery" src="images/strip/2.png" /></div>
+            <div class="flex-strip-item contact"><img alt="strip image from gallery" src="images/strip/3.png" /></div>
+            <div class="flex-strip-item contact"><img alt="strip image from gallery" src="images/strip/4.png" /></div>
+            <div class="flex-strip-item contact"><img alt="strip image from gallery" src="images/strip/5.png" /></div>
+            <div class="flex-strip-item contact"><img alt="strip image from gallery" src="images/strip/6.png" /></div>
+            <div class="flex-strip-item contact"><img alt="strip image from gallery" src="images/strip/7.png" /></div>
+            <div class="flex-strip-item contact"><img alt="strip image from gallery" src="images/strip/8.png" /></div>
         </div>
     </div>
 
@@ -368,7 +426,7 @@
                 Pablo Neruda</p>
         </div>
         <div class="flex-item designedby">
-            <img src="images/general/vectorlivelinkback.png" />
+            <img alt="Design By Vectorlive.com.au" src="images/general/vectorlivelinkback.png" />
 
         </div>
 
