@@ -342,7 +342,7 @@
 
                 <div style="height:100px;">
                     <label class="field field_animated field_a2 page__field">
-                        <input autocomplete="off" id="Email" class="field__input"
+                        <input autocomplete="off" id="email" class="field__input"
                             placeholder="Please double check your email to make sure its correct..." type="email"
                             required />
                         <span class="field__label-wrap">
@@ -353,7 +353,7 @@
 
                 <div style="height:100px;">
                     <label class="field field_animated field_a2 page__field">
-                        <select class="select-form field__input" name="Package" required>
+                        <select class="select-form field__input" name="package" required>
                             <option value="Take me Away">Packages</option>
                             <option value="Take me Away">If I May - $599</option>
                             <option value="Make Me Stay">Take Me Away - $799</option>
@@ -371,7 +371,7 @@
 
                 <div style="height:100px;">
                     <label class="field field_animated field_a2 page__field">
-                        <input autocomplete="off" id="Location" class="field__input"
+                        <input autocomplete="off" id="location" class="field__input"
                             placeholder="Where are you having the wedding ?" type="text" required />
                         <span class="field__label-wrap">
                             <span class="field__label">Location</span>
@@ -381,7 +381,7 @@
 
                 <div style="height:100px;">
                     <label class="field field_animated field_a2 page__field">
-                        <input autocomplete="off" id="Marketing" class="field__input"
+                        <input autocomplete="off" id="market" class="field__input"
                             placeholder="Please let me know where you found me, google - facebook - instagram - friends ? "
                             type="text" required />
                         <span class="field__label-wrap">
@@ -389,13 +389,14 @@
                         </span>
                     </label>
                 </div>
-
-                <button class="read-more-trigger">Submit</button>
+                <div id="contact-results"></div>
+                <button onclick="emailMe();" id="contact-button" class="read-more-trigger">Submit</button>
 
 
 
             </form>
-
+            
+        
         </div>
     </div>
     <div id="footer-strip">
